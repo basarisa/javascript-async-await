@@ -32,4 +32,16 @@ let getJohnOrders = () => {
   });
 };
 
-// Start coding here
+const asnchronousFuntion = async () => {
+  try {
+    const johnProfile = await getJohnProfile();
+    console.log(johnProfile);
+
+    const johnOrders = await getJohnOrders();
+    console.log(johnOrders);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+asnchronousFuntion();
